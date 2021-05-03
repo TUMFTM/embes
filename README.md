@@ -1,7 +1,7 @@
 # Introduction
 
-`mod_energy_strategy` is a repository containing an algorithm to calculate an energy strategy for an all-electric
-race car. The algorithm is based on the [acados](https://docs.acados.org/) modeling language and interfaces [HPIPM](https://www.syscop.de/research/software/hpipm) to solve the internal Quadratic Problems. The package was developed by
+The repository `embes` (embedded energy strategy) contains an algorithm to calculate an energy strategy for an
+all-electric race car in real time.  The algorithm is based on the [acados](https://docs.acados.org/) modeling language and interfaces [HPIPM](https://www.syscop.de/research/software/hpipm) to solve the internal Quadratic Problems. The package was developed by
 and to power the race vehicle of the [Technical University of Munich](https://www.mw.tum.de/en/ftm/main-research/vehicle-dynamics-and-control-systems/roborace-autonomous-motorsport/) in the [Roborace](https://roborace.com/) competition.
 
 The algorithm takes into account the constraining equations describing
