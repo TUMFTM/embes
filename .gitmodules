@@ -1,0 +1,4 @@
+[submodule "external/global_racetrajectory_optimization"]
+	path = external/global_racetrajectory_optimization
+	url = https://github.com/TUMFTM/global_racetrajectory_optimization.git
+	branch = master

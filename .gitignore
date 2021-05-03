@@ -1,0 +1,46 @@
+
+recalc_online/__pycache__/
+
+recalc_online/c_generated_code/
+
+*.tex
+
+__pycache__/
+
+c_generated_code/
+
+.idea/
+
+acados_ocp.json
+
+comp_approx/sumo-toolbox/config/*
+# exclude SUMO configurator .xml
+!comp_approx/sumo-toolbox/config/default_batt.xml
+comp_approx/sumo-toolbox/doc/*
+comp_approx/sumo-toolbox/lib/*
+comp_approx/sumo-toolbox/src/*
+
+# exclude all examples in SUMO folder
+comp_approx/sumo-toolbox/examples/*
+# include battery example main folder
+!comp_approx/sumo-toolbox/examples/01_BatteryLossNew
+# exclude all content in battery main folder
+comp_approx/sumo-toolbox/examples/01_BatteryLossNew/*
+# include simulator .xml
+!comp_approx/sumo-toolbox/examples/01_BatteryLossNew/BatteryLoss.xml
+
+comp_approx/sumo-toolbox/sumo.log
+
+comp_approx/sumo-toolbox/sumo.log.lck
+
+*.slxc
+*.autosave
+
+comp_approx/powertrain/models/scripts/slprj/*
+comp_approx/powertrain/models/slprj/*
+
+comp_approx/powertrain/params/slprj/*
+
+comp_approx/slprj/*
+
+docs/build/*
