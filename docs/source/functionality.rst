@@ -3,10 +3,10 @@
 Functionality
 =============
 
-This section explains the basic funcitonality of the enrgy strategy algorithm. It covers **three main steps**, which
+This section explains the basic functionality of the energy strategy algorithm. It covers **three main steps**, which
 must be executed in a row to get the algorithm up and working. The three steps cover the
 
-    * **reference velocity profile**,
+    * **calculation of the reference velocity profile**,
     * **initialization of the energy strategy**,
     * **recalculation of the energy strategy**.
 
@@ -15,8 +15,9 @@ Reference velocity profile
 
 At first, we need a reference velocity profile for the entire race. This profile would be time-optimal if no
 thermodynamic or energetic constraints were present. By this, only the driving dynamics are constraining the
-optimization problem. We will later use the reference velocity profile as an initial state guess for the actual
-energy strategy. A reference velocity profile for a race consisting of 12 laps on the `Monteblanco <https://www.google
+optimization problem. We will later use the reference velocity profile as an initial state guess for the calculation
+of the energy strategy. A reference velocity profile for a race consisting of 12 laps on the `Monteblanco
+<https://www.google
 .com/maps/place/Circuito+Monteblanco/@37.3591185,-6.5711467,15z/data=!4m5!3m4!1s0x0:0x159b1585543f1b3a!8m2!3d37
 .3591185!4d-6.5711467>`_ race circuit could look like in the following figure:
 
@@ -30,8 +31,8 @@ Initialization of the energy strategy
 -------------------------------------
 
 Just before the race starts, we wish to initialize the energy strategy. The powertrain states (temperature and
-available energy) are measured. These information are then used to find the time-optimal velocity profile and its
-corresponding power:
+available energy) are measured (:math:`\boldsymbol{x}_0`). These information are then used to find the time-optimal
+velocity profile and its corresponding power:
 
 .. image:: v_init.PNG
    :scale: 50

@@ -2,7 +2,7 @@ Configuration
 =============
 
 The energy strategy is parametrized using the file `racecar.ini` or `db.ini` from the referenced/external repository
-`global_racetrajectory_optimization`.
+`global_racetrajectory_optimization`, which can be found in the folder `external/`.
 
 .. _availableTracks:
 

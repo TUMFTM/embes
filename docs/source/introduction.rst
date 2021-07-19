@@ -13,7 +13,8 @@ and to power the race vehicle of the `Technical University of Munich <https://ww
 .de/en/ftm/main-research/vehicle-dynamics-and-control-systems/roborace-autonomous-motorsport/>`_ in the `Roborace
 <https://roborace.com/>`_ competition.
 
-If you directly want to dive into the functionality behind this algorithm, check out section :ref:`refFunctionality`.
+If you directly want to dive into the functionality behind this algorithm, check out the section
+:ref:`refFunctionality`.
 
 The algorithm takes into account the constraining equations describing
 
@@ -24,4 +25,4 @@ The algorithm takes into account the constraining equations describing
 It minimizes the race time, i.e., it solves a Minimum Race Time Problem (MRTP), for a given number of laps. For
 mathematical details, see :ref:`refProblemFormulation`.
 
-For a quick start, check out the :ref:`refInstallation` and the :ref:`refExamples`-sections of this manual.
+For a quick start, check out the :ref:`refInstallation` and the :ref:`refExamples`-section in this manual.

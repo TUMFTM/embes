@@ -4,25 +4,13 @@
 Examples
 ********
 
-In the folder `examples`, we provide `use_emb_es.py`, which opens an ZMQ Sender and Receiver to communicate with the
-energy strategy algorithm. In the following, we wish to explain its code fragments in its **main**.
+In the folder `examples/`, we provide the file `use_emb_es.py`, which opens a ZMQ Sender and Receiver to communicate with the
+energy strategy algorithm. In the following, we wish to explain the code fragments in its **main**.
 
 **Important:** :ref:`refStep1` must be executed prior to the race start. :ref:`refStep2` must be run to initialize
 the energy
 strategy.
 :ref:`refStep3` is running online to recalculate the strategy.
-
-Open ZMQ interfaces
--------------------
-
-.. code-block:: python
-
-    # Object to store energy strategy results
-    vpl = VarPowerLimits()
-
-    # initialize interfaces to energy strategy
-    vpl.init_interface_recalc()
-
 
 .. _refStep1:
 
@@ -35,6 +23,7 @@ Creation of the reference velocity profile `v_ref` is done by
     vpl.trigger_recalc(phase='v',
                        track='mnt')
 
+By this, the reference velocity profile is generated and saved as a `.csv`-file.
 
 .. _refStep2:
 
@@ -52,9 +41,9 @@ Initialization of the energy strategy is done by
                        laps=12,
                        x0=np.array([1, 0, 0, 0.5, 35, 35, 35, 35, 35]))
 
-Here, `s_meas` indicates the global s-coordinate where a powertrain measurement of SOC or temperature was taken
-(start: `s_meas` = 0.0m). The number of race laps must be set in `laps` for the `track`. The initial state conditions
-are given as argument `x0`. Have a look in :ref:`availableTracks` to find available race tracks and their respective
+Here, `s_meas` indicates the global s-coordinate where a powertrain measurement of SOC and temperatures was made
+(start: `s_meas` = 0.0m). The number of race laps must be set in the argument `laps` for a specific `track`. The initial state conditions (see code comment above)
+are provided in `x0`. Have a look in :ref:`availableTracks` to find available race tracks and their respective
 IDs.
 
 .. _refStep3:
@@ -70,28 +59,28 @@ Re-optimization of the energy strategy is done by
     vpl.trigger_recalc(s_meas=s_meas_,
                        meas_diff=np.array([0, 0, 0, -0.02, 0, 3.0, 0, 0, 0]))
 
-Here, `s_meas` describes the global s-coordinate where the measurement value was taken. The measurement difference
-with respect to the last planned value at this position is given in `meas_diff`.
+Here, `s_meas` describes the global s-coordinate where the measurement value was generated. The measurement differences
+compared to the planned values of the last energy strategy recalculation at this position need to be set in `meas_diff`.
 
 .. _OpenLoop:
 
 Open loop simulation (internal)
 -------------------------------
 
-The energy strategy can be run in an open loop mode. This example explains, how to run
+The energy strategy can be run in an open loop mode. This example explains how to run
 
     - a trajectory planner,
     - the `velocity optimization module <https://github.com/TUMFTM/velocity_optimization>`_,
-    - a conroller,
+    - an LQR vehicle dynamics controller,
     - a vehicle dynamics simulation,
     - the energy strategy.
 
 To do this, a trajectory planner, which uses the
-`velocity_optimization <https://github.com/TUMFTM/velocity_optimization>`_ module must be started. It transfers local trajectories to the controller, and the vehicle
+`velocity_optimization <https://github.com/TUMFTM/velocity_optimization>`_ module must be started. It transfers local trajectories to the LQR controller, and the vehicle
 dynamics simulation. The trajectory planner itself calls the initialization :ref:`refStep2` and the reoptimization
 :ref:`refStep3` of the energy strategy module. Do the following steps to setup the open loop simulation:
 
-    1. CLone the repository `mod_control <https://gitlab.lrz.de/iac/mod_control>`_ and checkout branch `old_rr_ltpl`:
+    1. Clone the repository `mod_control <https://gitlab.lrz.de/iac/mod_control>`_ and checkout branch `old_rr_ltpl`:
 
         .. code-block:: bash
 
@@ -99,8 +88,7 @@ dynamics simulation. The trajectory planner itself calls the initialization :ref
             git checkout old_rr_ltpl
 
     2. Download the latest controller and vehicle dynamics simulation from `branch old_rr_ltpl <https://gitlab.lrz
-    .de/iac/mod_control/-/tree/old_rr_ltpl>`_
-    and extract the files into `/mod_control/misc/py_binds/dist/` and install via
+    .de/iac/mod_control/-/tree/old_rr_ltpl>`_ and extract the files into `/mod_control/misc/py_binds/dist/` and install via
 
         .. code-block:: bash
 

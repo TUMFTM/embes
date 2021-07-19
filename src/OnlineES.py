@@ -309,7 +309,7 @@ class OnlineES:
         status = self.es_solver.solve()
 
         # --- First check: QP solver returned failure
-        if status is 4:
+        if status == 4:
             for i in range(0, N + 1):
                 if i < N:  # control guess u based on scenario. Longer run --> lower u-guess
                     self.es_solver.set(i, 'u', np.array([0.1 * self.es_model.f_drive_max, 0]))
@@ -318,7 +318,7 @@ class OnlineES:
             print("[INFO] ES re-solving with reduced control inputs guess ...")
             status = self.es_solver.solve()
 
-            if status is 0:
+            if status == 0:
                 print("[INFO] ES re-solve | solving time [s]:", float(self.es_solver.get_stats('time_tot')))
                 print("[INFO] ES re-solve | SQP iterations:", int(self.es_solver.get_stats('sqp_iter')))
 
@@ -328,14 +328,14 @@ class OnlineES:
 
         nlp_steplength = 1.0
         # --- Second check: Problem was solved directly
-        if status is 0:
+        if status == 0:
             print("[INFO] ES solver successful.")
             print("[INFO] ES | NLP solver status:", status)
             print("[INFO] ES | solving time [s]:", float(self.es_solver.get_stats('time_tot')))
             print("[INFO] ES | SQP iterations:", int(self.es_solver.get_stats('sqp_iter')))
 
         # --- Third check: NLP iterations limit
-        elif status is 2:
+        elif status == 2:
 
             nlp_steplength_reduction = 0.25
             nlp_steplength = self.es_solver.acados_ocp.solver_options.nlp_solver_step_length
@@ -356,7 +356,7 @@ class OnlineES:
                     # resolve OCP
                     print("[INFO] Solving again to optimize ES ...")
                     status = self.es_solver.solve()
-                    if status is 0:
+                    if status == 0:
                         print("[INFO] ES | solving time [s]:", float(self.es_solver.get_stats('time_tot')))
                         print("[INFO] ES | SQP iterations:", int(self.es_solver.get_stats('sqp_iter')))
                         print("[INFO] ES solver successful.")

@@ -3,8 +3,8 @@
 Problem formulation
 ===================
 
-Basically, the energy strategy works by solving an Optimal Control Problem. Its objective function is the lethargy, i
-.e., the time the vehicle takes to complete the race,
+Basically, the energy strategy works by solving an Optimal Control Problem. Its objective function is the lethargy,
+i.e., the time the vehicle takes to complete the race,
 
     .. math::
         J(x(s)) = \int_{0}^{s_\mathrm{f}}{\frac{1}{v(s)}\mathrm{d}s},
@@ -18,7 +18,7 @@ The state variables in the optimization problem are:
         }\right)^T \in \mathbb{R}^{n_x \times 1},
 
 where :math:`t(s)` describes the time, :math:`\sigma(s)` the battery SOC, and :math:`T_\mathrm{B}`,
-:math:`T_\mathrm{M}`, :math:`T_\mathrm{I}`, :math:`T_\mathrm{CM}`, :math:`T_\mathrm{CB}` the temepratures of battery,
+:math:`T_\mathrm{M}`, :math:`T_\mathrm{I}`, :math:`T_\mathrm{CM}`, :math:`T_\mathrm{CB}` the temperatures of battery,
 electric machines, inverters, colling liquid machine-inverter and cooling liquid battery.
 
 For convenience, we also included :math:`s(s)` in the state vector to simplify plotting the results.
@@ -38,14 +38,13 @@ describes the time spent between two spatial discretization points and depicts t
 function.
 
 The detailed mathematical problem formulation behind the code and further explanations can be found in our publication.
-The preprint of this publication can be found on arXiv:
 
-The paper will soon be available on SAE Mobilus:
+The paper will soon be available on SAE Mobilus, see :ref:`refCiting`.
 
 Convergence
 ===========
 
-If the solver does not convergence in the *presolve* or the *resolve*
+If the solver does not convergence during the *presolve* or the *resolve*
 step, it is likely that the optimization horizon is too short. The energy strategy makes only sense if the brake
 force gets restricted by nature. This means that simultaneous activation of the drive and brake force must be avoided
 by a sufficient length of the optimization horizon. **If the race is too short, and no energetic or thermodynamic

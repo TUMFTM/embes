@@ -80,7 +80,7 @@ class AcPmModel:
 
         stat = self.DDref.create_ref(track_data=self.track_data)
         if self.CI:
-            if stat is 0:
+            if stat == 0:
                 sys.exit(0)
             else:
                 sys.exit(1)
@@ -112,7 +112,7 @@ class AcPmModel:
                                      laps=num_laps)
 
         if self.CI:
-            if stat is 0:
+            if stat == 0:
                 sys.exit(0)
             else:
                 sys.exit(1)

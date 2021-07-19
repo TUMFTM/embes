@@ -1,8 +1,14 @@
 #!/bin/bash
 
-# clone embedded energy strategy repository and initialize submodule
-git clone https://gitlab.lrz.de/roborace/modules/mod_energy_strategy.git
-cd mod_energy_strategy
+# check if user has cloned repo already. If not, clone repo and cd into it
+if [ ! -d "../mod_energy_strategy" ]
+then
+  git clone https://gitlab.lrz.de/roborace/modules/mod_energy_strategy.git
+  cd mod_energy_strategy
+else
+  echo Repo already cloned, moving on to submodule initialization.
+fi
+
 git submodule update --recursive --init
 cd ..
 
