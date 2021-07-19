@@ -87,8 +87,7 @@ dynamics simulation. The trajectory planner itself calls the initialization :ref
             git clone https://gitlab.lrz.de/iac/mod_control
             git checkout old_rr_ltpl
 
-    2. Download the latest controller and vehicle dynamics simulation from `branch old_rr_ltpl <https://gitlab.lrz
-    .de/iac/mod_control/-/tree/old_rr_ltpl>`_ and extract the files into `/mod_control/misc/py_binds/dist/` and install via
+    2. Download the latest controller and vehicle dynamics simulation from `branch old_rr_ltpl <https://gitlab.lrz.de/iac/mod_control/-/tree/old_rr_ltpl>`_ and extract the files into `/mod_control/misc/py_binds/dist/` and install via
 
         .. code-block:: bash
 
