@@ -27,8 +27,7 @@ vehicle, since it is only constrained by the driving dynamics:
 ### Initialization of the energy strategy
 
 Before the race starts, we calculate an initial energy strategy. In the following example, consisting of 12 race laps
-on the [Monteblanco](https://www.google.com/maps/place/Circuito+Monteblanco/@37.3591185,-6.5711467,
-15z/data=!4m5!3m4!1s0x0:0x159b1585543f1b3a!8m2!3d37.3591185!4d-6.5711467) race circuit, the machine temperature and the
+on the [Monteblanco](https://www.google.com/maps/place/Circuito+Monteblanco/@37.3591185,-6.5711467,15z/data=!4m5!3m4!1s0x0:0x159b1585543f1b3a!8m2!3d37.3591185!4d-6.5711467) race circuit, the machine temperature and the
 battery SOC reach their technical limits when crossing the finish line:
 
 #### Optimal velocity profile:
@@ -64,7 +63,7 @@ The new plan for the remaining race, stating from `s = 500 m`, looks like the fo
 
 # Documentation
 
-A more detailed documentation can be found here: [Click this link to go to the documentation page](https://roborace.pages.gitlab.lrz.de/modules/mod_energy_strategy/introduction.html).
+A more detailed documentation can be found here: [Click this link to go to the documentation page](https://embes.readthedocs.io/en/latest/introduction.html).
 
 ### Disclaimer
 
