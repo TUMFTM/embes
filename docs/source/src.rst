@@ -44,14 +44,6 @@ src.def\_es\_solver module
    :undoc-members:
    :show-inheritance:
 
-src.export\_csv module
-----------------------
-
-.. automodule:: src.export_csv
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 src.getIPOPTData module
 -----------------------
 
@@ -64,30 +56,6 @@ src.get\_track module
 ---------------------
 
 .. automodule:: src.get_track
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-src.import\_online module
--------------------------
-
-.. automodule:: src.import_online
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-src.load\_csv module
---------------------
-
-.. automodule:: src.load_csv
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-src.state\_guess module
------------------------
-
-.. automodule:: src.state_guess
    :members:
    :undoc-members:
    :show-inheritance:
