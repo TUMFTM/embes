@@ -67,7 +67,7 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-subporocess.call('apt-get install cmake', shell=True)
+subprocess.call('apt-get install cmake', shell=True)
 subprocess.call('git clone https://github.com/acados/acados.git', shell=True)
 subprocess.call('cd acados', shell=True)
 subprocess.call('git submodule update --recursive --init', shell=True)
