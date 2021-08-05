@@ -66,17 +66,3 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-subprocess.call('apt-get install cmake', shell=True)
-subprocess.call('git clone https://github.com/acados/acados.git', shell=True)
-subprocess.call('cd acados', shell=True)
-subprocess.call('git submodule update --recursive --init', shell=True)
-
-subprocess.call('mkdir -p build', shell=True)
-subprocess.call('cd build', shell=True)
-subprocess.call('cmake ..', shell=True)
-subprocess.call('make install', shell=True)
-subprocess.call('pip3 install interfaces/acados_template', shell=True)
-
-subprocess.call('export ACADOS_SOURCE_DIR=home/$USER/emb_es_root/acados', shell=True)
-subprocess.call('export LD_LIBRARY_PATH=home/$USER/emb_es_root/acados/lib:$LD_LIBRARY_PATH', shell=True)
