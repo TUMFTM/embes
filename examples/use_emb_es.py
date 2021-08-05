@@ -27,17 +27,15 @@ class VarPowerLimits:
                  'snd_recalc')
 
     def __init__(self):
-
         """
-        Python version: 3.5
-        Created by: Thomas Herrmann (thomas.herrmann@tum.de)
-        Created on: 01.02.2020
-
-        Documentation: Class to store and interpolate variable power limits to be used during driving to feed into the
+        Class to store and interpolate variable power limits to be used during driving to feed into the
         variable P_max constraint.
 
-        Inputs:
-        input_path: absolute path to folder containing variable vehicle and track information
+        :Authors:
+            Thomas Herrmann <thomas.herrmann@tum.de>
+
+        :Created on:
+            01.02.2020
         """
 
         self.snd_recalc = None
