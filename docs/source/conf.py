@@ -17,6 +17,8 @@ sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('../../src'))
 sys.path.insert(0, os.path.abspath('../../postproc'))
+sys.path.insert(0, os.path.abspath('../../examples'))
+sys.path.insert(0, os.path.abspath('../../ci'))
 
 
 # -- Project information -----------------------------------------------------

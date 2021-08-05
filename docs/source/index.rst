@@ -14,7 +14,7 @@ Welcome to embes's documentation!
    functionality
    installation
    problem_formulation
-   examples
+   how_to_use
    configuration
    citing
    modules
