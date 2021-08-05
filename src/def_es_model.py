@@ -28,7 +28,11 @@ elif parser.read(os.path.join(module_path, "external/global_racetrajectory_optim
     # adapt module path to make it treatable as if it was an internal import (see above)
     pwr_src = pwr_src.opt_mintime_traj
 else:
-    raise ValueError('Specified config file does not exist or is empty!')
+    on_rtd = os.environ.get('READTHEDOCS') == 'True'
+    if on_rtd:
+        pass
+    else:
+        raise ValueError('Specified config file does not exist or is empty!')
 
 
 def es_model(b_dd_ref: bool = False,
