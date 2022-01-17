@@ -3,17 +3,17 @@
 Citing
 ============
 
-If you find this work helpful, please cite it using::
+If you find this work helpful, please cite it using [SAE Mobilus](https://saemobilus.sae.org/content/12-05-01-0005/):
 
-    @article{Herrmann2021,
-     author = {Herrmann, Thomas and Sauerbeck, Florian and Bayerlein, Maximilian and Betz, Johannes and Lienkamp, Markus},
-     year = {2021},
+    @article{Herrmann2022,
+     author = {Herrmann, Thomas and Sauerbeck, Florian and Bayerlein, Maximilian and Betz, Johannes and
+     Lienkamp, Markus},
+     year = {2022},
      title = {{Optimization-Based Real-Time-Capable Energy Strategy for Autonomous Electric Race Cars}},
-     pages = {000--000, In Press},
-     volume = {0},
-     number = {0},
-     issn = {2574-075X},
+     volume = {5},
+     number = {1},
+     issn = {2574-0741},
      journal = {{SAE International Journal of Connected and Automated Vehicles}},
-     doi = {000.000.000}
+     doi = {https://doi.org/10.4271/12-05-01-0005}
     }
 
