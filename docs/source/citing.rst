@@ -3,7 +3,7 @@
 Citing
 ============
 
-If you find this work helpful, please cite it using [SAE Mobilus](https://saemobilus.sae.org/content/12-05-01-0005/):
+If you find this work helpful, please cite it using [SAE Mobilus](https://saemobilus.sae.org/content/12-05-01-0005)
 
     @article{Herrmann2022,
      author = {Herrmann, Thomas and Sauerbeck, Florian and Bayerlein, Maximilian and Betz, Johannes and
