@@ -3,7 +3,8 @@
 Citing
 ============
 
-If you find this work helpful, please cite it using [SAE Mobilus](https://saemobilus.sae.org/content/12-05-01-0005)
+If you find this work helpful, please cite it using `SAE Mobilus <https://saemobilus.sae.org/content/12-05-01-0005>`_::
+
 
     @article{Herrmann2022,
      author = {Herrmann, Thomas and Sauerbeck, Florian and Bayerlein, Maximilian and Betz, Johannes and
@@ -14,6 +15,5 @@ If you find this work helpful, please cite it using [SAE Mobilus](https://saemob
      number = {1},
      issn = {2574-0741},
      journal = {{SAE International Journal of Connected and Automated Vehicles}},
-     doi = {https://doi.org/10.4271/12-05-01-0005}
-    }
+     doi = {https://doi.org/10.4271/12-05-01-0005}}
 
